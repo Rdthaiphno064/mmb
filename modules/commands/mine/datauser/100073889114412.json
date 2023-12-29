@@ -1,0 +1,53 @@
+{
+  "name": "𝑳𝒆 𝑩𝒂 𝑩𝒂𝒄𝒉",
+  "ID": "100073889114412",
+  "mainROD": "Cúp Netherite",
+  "GPS": {
+    "locate": "The Earth",
+    "area": "Tàn Tích Biển Sâu"
+  },
+  "fishBag": [
+    {
+      "ID": 0,
+      "name": "Bedrock",
+      "category": "Legendary",
+      "size": 999999,
+      "sell": 0
+    },
+    {
+      "ID": 3,
+      "name": "Khối Kim Cương",
+      "category": "Uncommon",
+      "size": 40,
+      "sell": 370,
+      "image": "https://i.imgur.com/vGnhhHy.png"
+    },
+    {
+      "ID": 4,
+      "name": "Khối Kim Cương",
+      "category": "Uncommon",
+      "size": 40,
+      "sell": 370,
+      "image": "https://i.imgur.com/vGnhhHy.png"
+    },
+    {
+      "ID": 5,
+      "name": "Khối Kim Cương",
+      "category": "Uncommon",
+      "size": 40,
+      "sell": 370,
+      "image": "https://i.imgur.com/vGnhhHy.png"
+    }
+  ],
+  "item": [
+    {
+      "name": "Cúp Netherite",
+      "price": 29000,
+      "durability": 820,
+      "countdown": 3,
+      "countdownData": 1692757664607,
+      "image": "https://i.imgur.com/k1skyAb.png"
+    }
+  ],
+  "timeRegister": "15:02:53, 1/7/2023"
+}

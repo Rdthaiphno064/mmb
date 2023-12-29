@@ -1,0 +1,29 @@
+{
+  "name": "Quang Trọng",
+  "ID": "100070797215086",
+  "mainROD": null,
+  "GPS": {
+    "locate": null,
+    "area": null
+  },
+  "fishBag": [
+    {
+      "ID": 0,
+      "name": "Bedrock",
+      "category": "Legendary",
+      "size": 999999,
+      "sell": 0
+    }
+  ],
+  "item": [
+    {
+      "name": "Cúp sắt",
+      "price": 4000,
+      "durability": 100,
+      "countdown": 8,
+      "countdownData": null,
+      "image": "https://i.imgur.com/Rrlr2ZB.png"
+    }
+  ],
+  "timeRegister": "10:16:13, 23/8/2023"
+}

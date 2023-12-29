@@ -1,0 +1,21 @@
+{
+  "name": "Lương Dũng",
+  "ID": "100087120012764",
+  "mainROD": "Cúp Netherite",
+  "GPS": {
+    "locate": "The Earth",
+    "area": "Hang Động"
+  },
+  "fishBag": [],
+  "item": [
+    {
+      "name": "Cúp Netherite",
+      "price": 29000,
+      "durability": 100,
+      "countdown": 3,
+      "countdownData": 1693482747176,
+      "image": "https://i.imgur.com/k1skyAb.png"
+    }
+  ],
+  "timeRegister": "12:22:27, 16/7/2023"
+}

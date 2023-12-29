@@ -1,0 +1,44 @@
+{
+    "account_number": "388006",
+    "uid": "100035418977530",
+    "balance": "0",
+    "created_at": 1701815066157,
+    "debt": "0",
+    "count_debt": 0,
+    "status": 0,
+    "history": [
+        {
+            "type": "borrow",
+            "amount": "9999",
+            "author": "100035418977530",
+            "time": 1701815122731
+        },
+        {
+            "type": "repay",
+            "amount": "9999",
+            "author": "100035418977530",
+            "time": 1701815133951
+        },
+        {
+            "type": "send",
+            "amount": "1039448530990",
+            "author": "100035418977530",
+            "time": 1701815501853
+        },
+        {
+            "type": "withdraw",
+            "amount": "1039448530990",
+            "author": "100035418977530",
+            "time": 1701815556566
+        }
+    ],
+    "logins": [],
+    "settings": {},
+    "expired_ban": {},
+    "interest_period": {
+        "balance": 1701901523005,
+        "debt": 1701818723005
+    },
+    "pass": "Zuyzuy2004",
+    "timestamp_due_repay": 1701987923004
+}

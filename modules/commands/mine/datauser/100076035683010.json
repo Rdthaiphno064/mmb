@@ -1,0 +1,45 @@
+{
+  "name": "Hiếu Trung",
+  "ID": "100076035683010",
+  "mainROD": "Cúp gỗ",
+  "GPS": {
+    "locate": "Nether And The End",
+    "area": "Sông Lava"
+  },
+  "fishBag": [
+    {
+      "ID": 0,
+      "name": "Bedrock",
+      "category": "Legendary",
+      "size": 999999,
+      "sell": 0
+    },
+    {
+      "ID": 1,
+      "name": "Nether Quartz Ore",
+      "category": "Uncommon",
+      "size": 120,
+      "sell": 990,
+      "image": "https://i.imgur.com/2lk1JeN.png"
+    }
+  ],
+  "item": [
+    {
+      "name": "Cúp gỗ",
+      "price": 400,
+      "durability": 0,
+      "countdown": 10,
+      "countdownData": 1689431380562,
+      "image": "https://i.imgur.com/IODc9Jo.png"
+    },
+    {
+      "name": "Cúp đá",
+      "price": 1500,
+      "durability": 50,
+      "countdown": 9,
+      "countdownData": null,
+      "image": "https://i.imgur.com/XHTNRGF.png"
+    }
+  ],
+  "timeRegister": "21:16:22, 15/7/2023"
+}

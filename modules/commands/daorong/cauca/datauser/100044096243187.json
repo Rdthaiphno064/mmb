@@ -1,0 +1,20 @@
+{
+    "name": "Phan Thảo Nguyên",
+    "ID": "100044096243187",
+    "mainROD": null,
+    "GPS": {
+        "locate": null,
+        "area": null
+    },
+    "fishBag": [
+        {
+            "ID": 0,
+            "name": "Đừng bán con cá này ko là lỗi tao đéo chịu trách nhiệm đâu",
+            "category": "Legendary",
+            "size": 999999,
+            "sell": 0
+        }
+    ],
+    "item": [],
+    "timeRegister": "12:28:54, 8/7/2023"
+}

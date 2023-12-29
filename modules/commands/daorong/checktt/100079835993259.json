@@ -1,0 +1,37 @@
+{
+    "total": [
+        {
+            "id": "100084868117065",
+            "count": 5
+        },
+        {
+            "id": "100079835993259",
+            "count": 2
+        }
+    ],
+    "week": [
+        {
+            "id": "100084868117065",
+            "count": 0,
+            "name": "Lê Bá Bách"
+        },
+        {
+            "id": "100079835993259",
+            "count": 0,
+            "name": "Nhạc Này Là Dính Quá Không Phải SatanDo Kĩ Năng Chứ Nó Không Phải Bán Linh Hồn Không Cần Phải Đính Đá Ở Trên Cặp GrillsTao Vẫn Deal Không Phải ChillNhạc Này Cháy Vãi Lồn"
+        }
+    ],
+    "day": [
+        {
+            "id": "100084868117065",
+            "count": 0,
+            "name": "Lê Bá Bách"
+        },
+        {
+            "id": "100079835993259",
+            "count": 0,
+            "name": "Nhạc Này Là Dính Quá Không Phải SatanDo Kĩ Năng Chứ Nó Không Phải Bán Linh Hồn Không Cần Phải Đính Đá Ở Trên Cặp GrillsTao Vẫn Deal Không Phải ChillNhạc Này Cháy Vãi Lồn"
+        }
+    ],
+    "time": 4
+}

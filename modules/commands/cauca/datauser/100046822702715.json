@@ -1,0 +1,37 @@
+{
+  "name": "Trần Thanh Trúc Linh",
+  "ID": "100046822702715",
+  "mainROD": "Titanium Harpoon",
+  "GPS": {
+    "locate": "The Crater",
+    "area": "Sparse Reef"
+  },
+  "fishBag": [
+    {
+      "ID": 0,
+      "name": "Đừng bán con cá này nếu không muốn nó lỗi🥲",
+      "category": "Legendary",
+      "size": 999999,
+      "sell": 0
+    }
+  ],
+  "item": [
+    {
+      "name": "Steel Harpoon",
+      "price": 1500,
+      "durability": 40,
+      "countdown": 180,
+      "countdownData": 1692499279266,
+      "image": "https://i.imgur.com/mptiizn.png"
+    },
+    {
+      "name": "Titanium Harpoon",
+      "price": 4000,
+      "durability": 40,
+      "countdown": 150,
+      "countdownData": 1692517200033,
+      "image": "https://i.imgur.com/vgIeC3t.jpg"
+    }
+  ],
+  "timeRegister": "08:54:16, 20/8/2023"
+}

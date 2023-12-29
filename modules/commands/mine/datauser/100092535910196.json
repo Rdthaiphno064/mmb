@@ -1,0 +1,413 @@
+{
+  "name": "Hev Afkpro",
+  "ID": "100092535910196",
+  "mainROD": "Cúp Netherite",
+  "GPS": {
+    "locate": "Nether And The End",
+    "area": "Tàn Tích Nether Cổ"
+  },
+  "fishBag": [
+    {
+      "ID": 0,
+      "name": "Bedrock",
+      "category": "Legendary",
+      "size": 999999,
+      "sell": 0
+    },
+    {
+      "ID": 11,
+      "name": "Quặng Lưu Ly",
+      "category": "Uncommon",
+      "size": 40,
+      "sell": 370,
+      "image": "https://i.imgur.com/s2YRZl4.png"
+    },
+    {
+      "ID": 14,
+      "name": "Nether Quartz Ore",
+      "category": "Uncommon",
+      "size": 120,
+      "sell": 990,
+      "image": "https://i.imgur.com/2lk1JeN.png"
+    },
+    {
+      "ID": 16,
+      "name": "Mảnh Vỡ Cổ Đại",
+      "category": "Legendary",
+      "size": 27,
+      "sell": 1900,
+      "image": "https://i.imgur.com/JJwen49.png"
+    },
+    {
+      "ID": 17,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 18,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 20,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 21,
+      "name": "Mảnh Vỡ Cổ Đại",
+      "category": "Legendary",
+      "size": 27,
+      "sell": 1900,
+      "image": "https://i.imgur.com/JJwen49.png"
+    },
+    {
+      "ID": 23,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 24,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 25,
+      "name": "Crying Obsidian",
+      "category": "Rare",
+      "size": 21,
+      "sell": 560,
+      "image": "https://i.imgur.com/tjJgtol.png"
+    },
+    {
+      "ID": 27,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 28,
+      "name": "Crying Obsidian",
+      "category": "Rare",
+      "size": 21,
+      "sell": 560,
+      "image": "https://i.imgur.com/tjJgtol.png"
+    },
+    {
+      "ID": 29,
+      "name": "Đất Nether",
+      "category": "Common",
+      "size": 27,
+      "sell": 190,
+      "image": "https://i.imgur.com/gLYYk05.png"
+    },
+    {
+      "ID": 30,
+      "name": "Nether Quartz Ore",
+      "category": "Uncommon",
+      "size": 120,
+      "sell": 990,
+      "image": "https://i.imgur.com/2lk1JeN.png"
+    },
+    {
+      "ID": 31,
+      "name": "Crying Obsidian",
+      "category": "Rare",
+      "size": 21,
+      "sell": 560,
+      "image": "https://i.imgur.com/tjJgtol.png"
+    },
+    {
+      "ID": 33,
+      "name": "Đất Nether",
+      "category": "Common",
+      "size": 27,
+      "sell": 190,
+      "image": "https://i.imgur.com/gLYYk05.png"
+    },
+    {
+      "ID": 34,
+      "name": "Đất Nether",
+      "category": "Common",
+      "size": 27,
+      "sell": 190,
+      "image": "https://i.imgur.com/gLYYk05.png"
+    },
+    {
+      "ID": 35,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 36,
+      "name": "Đất Nether",
+      "category": "Common",
+      "size": 27,
+      "sell": 190,
+      "image": "https://i.imgur.com/gLYYk05.png"
+    },
+    {
+      "ID": 37,
+      "name": "Đất Nether",
+      "category": "Common",
+      "size": 27,
+      "sell": 190,
+      "image": "https://i.imgur.com/gLYYk05.png"
+    },
+    {
+      "ID": 38,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 39,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 40,
+      "name": "Crying Obsidian",
+      "category": "Rare",
+      "size": 21,
+      "sell": 560,
+      "image": "https://i.imgur.com/tjJgtol.png"
+    },
+    {
+      "ID": 41,
+      "name": "Đất Nether",
+      "category": "Common",
+      "size": 27,
+      "sell": 190,
+      "image": "https://i.imgur.com/gLYYk05.png"
+    },
+    {
+      "ID": 42,
+      "name": "Mảnh Vỡ Cổ Đại",
+      "category": "Legendary",
+      "size": 27,
+      "sell": 1900,
+      "image": "https://i.imgur.com/JJwen49.png"
+    },
+    {
+      "ID": 43,
+      "name": "Crying Obsidian",
+      "category": "Rare",
+      "size": 21,
+      "sell": 560,
+      "image": "https://i.imgur.com/tjJgtol.png"
+    },
+    {
+      "ID": 45,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 46,
+      "name": "Nether Quartz Ore",
+      "category": "Uncommon",
+      "size": 120,
+      "sell": 990,
+      "image": "https://i.imgur.com/2lk1JeN.png"
+    },
+    {
+      "ID": 47,
+      "name": "Crying Obsidian",
+      "category": "Rare",
+      "size": 21,
+      "sell": 560,
+      "image": "https://i.imgur.com/tjJgtol.png"
+    },
+    {
+      "ID": 48,
+      "name": "Crying Obsidian",
+      "category": "Rare",
+      "size": 21,
+      "sell": 560,
+      "image": "https://i.imgur.com/tjJgtol.png"
+    },
+    {
+      "ID": 49,
+      "name": "Nether Quartz Ore",
+      "category": "Uncommon",
+      "size": 120,
+      "sell": 990,
+      "image": "https://i.imgur.com/2lk1JeN.png"
+    },
+    {
+      "ID": 50,
+      "name": "Đất Nether",
+      "category": "Common",
+      "size": 27,
+      "sell": 190,
+      "image": "https://i.imgur.com/gLYYk05.png"
+    },
+    {
+      "ID": 51,
+      "name": "Crying Obsidian",
+      "category": "Rare",
+      "size": 21,
+      "sell": 560,
+      "image": "https://i.imgur.com/tjJgtol.png"
+    },
+    {
+      "ID": 52,
+      "name": "Crying Obsidian",
+      "category": "Rare",
+      "size": 21,
+      "sell": 560,
+      "image": "https://i.imgur.com/tjJgtol.png"
+    },
+    {
+      "ID": 53,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 54,
+      "name": "Mảnh Vỡ Cổ Đại",
+      "category": "Legendary",
+      "size": 27,
+      "sell": 1900,
+      "image": "https://i.imgur.com/JJwen49.png"
+    },
+    {
+      "ID": 55,
+      "name": "Nether Quartz Ore",
+      "category": "Uncommon",
+      "size": 120,
+      "sell": 990,
+      "image": "https://i.imgur.com/2lk1JeN.png"
+    },
+    {
+      "ID": 56,
+      "name": "Crying Obsidian",
+      "category": "Rare",
+      "size": 21,
+      "sell": 560,
+      "image": "https://i.imgur.com/tjJgtol.png"
+    },
+    {
+      "ID": 58,
+      "name": "Mảnh Vỡ Cổ Đại",
+      "category": "Legendary",
+      "size": 27,
+      "sell": 1900,
+      "image": "https://i.imgur.com/JJwen49.png"
+    },
+    {
+      "ID": 60,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 61,
+      "name": "Đất Nether",
+      "category": "Common",
+      "size": 27,
+      "sell": 190,
+      "image": "https://i.imgur.com/gLYYk05.png"
+    },
+    {
+      "ID": 63,
+      "name": "Đất Nether",
+      "category": "Common",
+      "size": 27,
+      "sell": 190,
+      "image": "https://i.imgur.com/gLYYk05.png"
+    },
+    {
+      "ID": 65,
+      "name": "Mảnh Vỡ Cổ Đại",
+      "category": "Legendary",
+      "size": 27,
+      "sell": 1900,
+      "image": "https://i.imgur.com/JJwen49.png"
+    },
+    {
+      "ID": 66,
+      "name": "Mảnh Vỡ Cổ Đại",
+      "category": "Legendary",
+      "size": 27,
+      "sell": 1900,
+      "image": "https://i.imgur.com/JJwen49.png"
+    },
+    {
+      "ID": 67,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 68,
+      "name": "Mảnh Vỡ Cổ Đại",
+      "category": "Legendary",
+      "size": 27,
+      "sell": 1900,
+      "image": "https://i.imgur.com/JJwen49.png"
+    },
+    {
+      "ID": 69,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    }
+  ],
+  "item": [
+    {
+      "name": "Cúp vàng",
+      "price": 8000,
+      "durability": 0,
+      "countdown": 7,
+      "countdownData": 1689322782885,
+      "image": "https://i.imgur.com/yPedwZX.png"
+    },
+    {
+      "name": "Cúp Netherite",
+      "price": 29000,
+      "durability": 0,
+      "countdown": 3,
+      "countdownData": 1689509907853,
+      "image": "https://i.imgur.com/k1skyAb.png"
+    }
+  ],
+  "timeRegister": "14:16:00, 14/7/2023"
+}

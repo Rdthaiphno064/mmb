@@ -1,0 +1,112 @@
+{
+    "notiGroup": true,
+    "iconUnsend": {
+        "status": false,
+        "icon": "❤️"
+    },
+    "NOTIFICATION": true,
+    "language": "vi",
+    "keyActive": "",
+    "DeveloperMode": false,
+    "autoCreateDB": true,
+    "allowInbox": true,
+    "autoClean": true,
+    "adminOnly": false,
+    "encryptSt": false,
+    "UPTIME": 1476564.7540581778,
+    "leave": {
+        "status": true,
+        "number": 10
+    },
+    "DASHBOARD": false,
+    "commandDisabled": [
+        "autodown.js"
+    ],
+    "eventDisabled": [],
+    "EMAIL": "",
+    "PASSWORD": "",
+    "OTPKEY": "",
+    "ACCESSTOKEN": "EAAD6V7os0gcBO4cOsbqiEgZAooKkhkQWOKUQC5HtLb2hSMqTmJPHfzvhZAHZA7bHPZBjKLfTGbKRSeASWA4XDrZChbZCLGxTtURy5OHhL8sxkVgcMKEqrDA2toG2PdzIFtpFbZBlZCQwzRGNbjPaoP9rByzzGKvJkOdAwlClIkoMP2NIMFitsLb8SOMtagZDZD",
+    "BOTNAME": "Mirai Project",
+    "PREFIX": "-",
+    "ADMINBOT": [
+        "593577006",
+        "100001378940139",
+        "",
+        "",
+        "",
+        "",
+        "100047493336393",
+        "100059454822702",
+        "100001378940139",
+        "100084329895588"
+    ],
+    "NDH": [
+        "593577006"
+    ],
+    "DATABASE": {
+        "sqlite": {
+            "storage": "data.sqlite"
+        }
+    },
+    "APPSTATEPATH": "appstate.json",
+    "NPM_FCA": "fca-horizon-remastered",
+    "SETUP_WIN": {
+        "port": 8888,
+        "use": "Nếu chạy nhiều hơn 1 file trên win thì thay đổi số này ở file thứ 2, 3, 4..."
+    },
+    "FCAOption": {
+        "forceLogin": true,
+        "listenEvents": true,
+        "pauseLog": true,
+        "logLevel": "silent",
+        "selfListen": true,
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20100101 Firefox/87.0"
+    },
+    "version": "3.6.0",
+    "bot": {
+        "APIKEY": "LUVMIN"
+    },
+    "daily": {
+        "cooldownTime": 8640000000,
+        "rewardCoin": 2000
+    },
+    "loto": {
+        "maxPlayers": 10,
+        "getDelay": 8
+    },
+    "mine": {
+        "APIKEY": ""
+    },
+    "pokemon": {
+        "APIKEY": ""
+    },
+    "subnautica": {
+        "APIKEY": ""
+    },
+    "video": {
+        "YOUTUBE_API": "AIzaSyBZosAoab1UH8ze1zFegz6wnppkf-quu7c"
+    },
+    "work": {
+        "cooldownTime": 1200000
+    },
+    "xidach": {
+        "maxPlayers": 5,
+        "normalWinBonus": 1,
+        "superWinBonus": 2,
+        "epicWinBonus": 4
+    },
+    "adminUpdate": {
+        "autoUnsend": true,
+        "sendNoti": true,
+        "timeToUnsend": 10
+    },
+    "log": {
+        "enable": true
+    },
+    "start": 0,
+    "key": "admin",
+    "spamcmt": {
+        "spamDelay": 1.5
+    }
+}

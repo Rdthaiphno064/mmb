@@ -1,0 +1,30 @@
+{
+  "name": "𝑳𝒆 𝑩𝒂 𝑩𝒂𝒄𝒉",
+  "ID": "100073889114412",
+  "mainROD": "Ion Powered Trident",
+  "GPS": {
+    "locate": "Sector Zero",
+    "area": "Arctic Kelp Forest"
+  },
+  "fishBag": [
+    {
+      "ID": 1,
+      "name": "Arctic Peeper",
+      "category": "Common",
+      "size": 34,
+      "sell": 200,
+      "image": "https://i.imgur.com/Qsx7khe.png"
+    }
+  ],
+  "item": [
+    {
+      "name": "Ion Powered Trident",
+      "price": 57000,
+      "durability": 1950,
+      "countdown": 15,
+      "countdownData": 1692498035600,
+      "image": "https://i.imgur.com/W5dAfCn.jpg"
+    }
+  ],
+  "timeRegister": "19:07:02, 7/7/2023"
+}

@@ -1,0 +1,253 @@
+{
+  "name": "Minh Đạt",
+  "ID": "100045737855811",
+  "mainROD": "Cúp Netherite",
+  "GPS": {
+    "locate": "The Earth",
+    "area": "Biển Nam Cực"
+  },
+  "fishBag": [
+    {
+      "ID": 0,
+      "name": "Bedrock",
+      "category": "Legendary",
+      "size": 999999,
+      "sell": 0
+    },
+    {
+      "ID": 91,
+      "name": "Lớp Tuyết Dày",
+      "category": "Rare",
+      "size": 67,
+      "sell": 990,
+      "image": "https://i.imgur.com/oTDC0Pm.png"
+    },
+    {
+      "ID": 92,
+      "name": "Lớp Tuyết Dày",
+      "category": "Rare",
+      "size": 67,
+      "sell": 990,
+      "image": "https://i.imgur.com/oTDC0Pm.png"
+    },
+    {
+      "ID": 93,
+      "name": "Lớp Tuyết Dày",
+      "category": "Rare",
+      "size": 67,
+      "sell": 990,
+      "image": "https://i.imgur.com/oTDC0Pm.png"
+    },
+    {
+      "ID": 97,
+      "name": "Lớp Tuyết Dày",
+      "category": "Rare",
+      "size": 67,
+      "sell": 990,
+      "image": "https://i.imgur.com/oTDC0Pm.png"
+    },
+    {
+      "ID": 101,
+      "name": "Lớp Tuyết Dày",
+      "category": "Rare",
+      "size": 67,
+      "sell": 990,
+      "image": "https://i.imgur.com/oTDC0Pm.png"
+    },
+    {
+      "ID": 103,
+      "name": "Lớp Tuyết Dày",
+      "category": "Rare",
+      "size": 67,
+      "sell": 990,
+      "image": "https://i.imgur.com/oTDC0Pm.png"
+    },
+    {
+      "ID": 106,
+      "name": "Lớp Tuyết Dày",
+      "category": "Rare",
+      "size": 67,
+      "sell": 990,
+      "image": "https://i.imgur.com/oTDC0Pm.png"
+    },
+    {
+      "ID": 107,
+      "name": "Lớp Tuyết Dày",
+      "category": "Rare",
+      "size": 67,
+      "sell": 990,
+      "image": "https://i.imgur.com/oTDC0Pm.png"
+    },
+    {
+      "ID": 108,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 109,
+      "name": "Đá Cuội",
+      "category": "Common",
+      "size": 30,
+      "sell": 200,
+      "image": "https://i.imgur.com/TF2q5Zp.jpg"
+    },
+    {
+      "ID": 110,
+      "name": "Đá",
+      "category": "Common",
+      "size": 31,
+      "sell": 200,
+      "image": "https://i.imgur.com/XKv8I3a.png"
+    },
+    {
+      "ID": 111,
+      "name": "Lớp Tuyết Dày",
+      "category": "Rare",
+      "size": 67,
+      "sell": 990,
+      "image": "https://i.imgur.com/oTDC0Pm.png"
+    },
+    {
+      "ID": 112,
+      "name": "Đá Cuội",
+      "category": "Common",
+      "size": 30,
+      "sell": 200,
+      "image": "https://i.imgur.com/TF2q5Zp.jpg"
+    },
+    {
+      "ID": 113,
+      "name": "Đá",
+      "category": "Common",
+      "size": 31,
+      "sell": 200,
+      "image": "https://i.imgur.com/XKv8I3a.png"
+    },
+    {
+      "ID": 114,
+      "name": "Lớp Tuyết Dày",
+      "category": "Rare",
+      "size": 67,
+      "sell": 990,
+      "image": "https://i.imgur.com/oTDC0Pm.png"
+    },
+    {
+      "ID": 115,
+      "name": "Đá Cuội",
+      "category": "Common",
+      "size": 30,
+      "sell": 200,
+      "image": "https://i.imgur.com/TF2q5Zp.jpg"
+    },
+    {
+      "ID": 116,
+      "name": "Khối Băng Mỏng",
+      "category": "Uncommon",
+      "size": 250,
+      "sell": 990,
+      "image": "https://i.imgur.com/UzsoFh6.png"
+    },
+    {
+      "ID": 117,
+      "name": "Lớp Tuyết Dày",
+      "category": "Rare",
+      "size": 67,
+      "sell": 990,
+      "image": "https://i.imgur.com/oTDC0Pm.png"
+    },
+    {
+      "ID": 118,
+      "name": "Khối Băng Mỏng",
+      "category": "Uncommon",
+      "size": 250,
+      "sell": 990,
+      "image": "https://i.imgur.com/UzsoFh6.png"
+    },
+    {
+      "ID": 119,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 120,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 121,
+      "name": "Khối Băng Xanh",
+      "category": "Legendary",
+      "size": 6700,
+      "sell": 720500,
+      "image": "https://i.imgur.com/Xd14qYH.png"
+    },
+    {
+      "ID": 122,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 123,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 124,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 125,
+      "name": "Đá Cuội",
+      "category": "Common",
+      "size": 30,
+      "sell": 200,
+      "image": "https://i.imgur.com/TF2q5Zp.jpg"
+    },
+    {
+      "ID": 126,
+      "name": "Lớp Tuyết Dày",
+      "category": "Rare",
+      "size": 67,
+      "sell": 990,
+      "image": "https://i.imgur.com/oTDC0Pm.png"
+    },
+    {
+      "ID": 127,
+      "name": "Khối Băng Mỏng",
+      "category": "Uncommon",
+      "size": 250,
+      "sell": 990,
+      "image": "https://i.imgur.com/UzsoFh6.png"
+    }
+  ],
+  "item": [
+    {
+      "name": "Cúp Netherite",
+      "price": 29000,
+      "durability": 680,
+      "countdown": 3,
+      "countdownData": 1689486758695,
+      "image": "https://i.imgur.com/k1skyAb.png"
+    }
+  ],
+  "timeRegister": "13:56:55, 14/7/2023"
+}

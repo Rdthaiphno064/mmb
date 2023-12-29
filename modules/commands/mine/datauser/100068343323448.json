@@ -1,0 +1,20 @@
+{
+    "name": "Nguyễn Văn Giáp",
+    "ID": "100068343323448",
+    "mainROD": null,
+    "GPS": {
+        "locate": null,
+        "area": null
+    },
+    "fishBag": [
+        {
+            "ID": 0,
+            "name": "Bedrock",
+            "category": "Legendary",
+            "size": 999999,
+            "sell": 0
+        }
+    ],
+    "item": [],
+    "timeRegister": "19:59:08, 12/9/2023"
+}

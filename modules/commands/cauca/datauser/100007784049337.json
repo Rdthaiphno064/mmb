@@ -1,0 +1,20 @@
+{
+    "name": "Nguyễn Thành",
+    "ID": "100007784049337",
+    "mainROD": null,
+    "GPS": {
+        "locate": null,
+        "area": null
+    },
+    "fishBag": [
+        {
+            "ID": 0,
+            "name": "Đừng bán con cá này nếu không muốn nó lỗi🥲",
+            "category": "Legendary",
+            "size": 999999,
+            "sell": 0
+        }
+    ],
+    "item": [],
+    "timeRegister": "21:47:29, 14/10/2023"
+}

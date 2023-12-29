@@ -1,0 +1,29 @@
+{
+  "name": "Đoàn Ngọc Văn",
+  "ID": "100092390615022",
+  "mainROD": null,
+  "GPS": {
+    "locate": null,
+    "area": null
+  },
+  "fishBag": [
+    {
+      "ID": 0,
+      "name": "Bedrock",
+      "category": "Legendary",
+      "size": 999999,
+      "sell": 0
+    }
+  ],
+  "item": [
+    {
+      "name": "Cúp Netherite",
+      "price": 29000,
+      "durability": 900,
+      "countdown": 3,
+      "countdownData": null,
+      "image": "https://i.imgur.com/k1skyAb.png"
+    }
+  ],
+  "timeRegister": "09:52:45, 23/8/2023"
+}

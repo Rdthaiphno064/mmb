@@ -1,0 +1,27 @@
+{
+  "name": "Cường Thịnh",
+  "ID": "100061160525111",
+  "pet": [
+    {
+      "name": "Malamar",
+      "type": "Dark",
+      "HP": "86.0",
+      "Attack": "92.0",
+      "Defense": "88.0",
+      "Speed": "73.0",
+      "skill": [
+        "Contrary",
+        "Suction Cups",
+        "Infiltrator"
+      ],
+      "coins": 10000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/687.png"
+    }
+  ],
+  "foods": [],
+  "solo": {
+    "win": 0,
+    "lose": 0,
+    "draw": 0
+  }
+}

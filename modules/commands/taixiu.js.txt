@@ -1,0 +1,226 @@
+module.exports.config = {
+	name: "tx",
+	version: "0.0.1",
+	hasPermssion: 0,
+	credits: "cc",
+	description: "Chơi tài xỉu",
+	commandCategory: "Game",
+    usages: "taixiu [tài/xỉu] [số tiền]",
+    cooldowns: 0
+};
+const axios = require('axios');
+var bdsd = true;
+var tilethang = '2';
+var tilethangb3dn = '2';
+var tilethangb2dn = '2';
+var timedelay = 2;
+var haisogiong = 2n;
+var basogiong = 3n;
+var motsogiong = 1n;
+function replace(int){
+    var str = int.toString();
+    var newstr = str.replace(/(.)(?=(\d{3})+$)/g,'$1,');
+    return newstr;
+}
+function getImage(number){
+    switch (number){
+        case 1: return "https://i.imgur.com/xtdfYkP.jpg";
+        case 2: return "https://i.imgur.com/UwcX6bB.jpg";
+        case 3: return "https://i.imgur.com/WdHxoVb.jpg";
+        case 4: return "https://i.imgur.com/aOQJ4uT.jpg";
+        case 5: return "https://i.imgur.com/iAARfLh.jpg";
+        case 6: return "https://i.imgur.com/vCncmlu.jpg";
+    }
+}
+function getRATE(tong){
+    if(tong == 4) var rate = 40;
+    if(tong == 5) var rate = 35;
+    if(tong == 6) var rate = 33;
+    if(tong == 7) var rate = 25;
+    if(tong == 8) var rate = 20;
+    if(tong == 9) var rate = 16;
+    if(tong == 10) var rate = 14;
+    if(tong == 11) var rate = 12;
+    if(tong == 12) var rate = 11;
+    if(tong == 13) var rate = 10;
+    if(tong == 14) var rate = 9;
+    if(tong == 15) var rate = 8;
+    if(tong == 16) var rate = 7;
+    if(tong == 17) var rate = 7;
+    return rate
+}
+module.exports.onLoad = async function({ event, api, Currencies, Users, args }){
+  if(!global.client.taixiu){
+        global.client.taixiu = {};
+        global.client.taixiu_end = {};
+        global.client.taixiu_start = {};
+  }
+  setInterval(()=>{
+    for(const ii of Object.keys(global.client.taixiu_start)){
+    if(!global.client.taixiu_start[ii]) return
+    if(global.client.taixiu[ii].data === undefined) return
+    if(Date.now() - global.client.taixiu_start[ii].time > 60*1000*2){
+      const { increaseMoney, decreaseMoney, getData } = Currencies;
+      var tong = 0,
+        msg = "[ Danh sách người chơi ]";
+      for (const i of Object.keys(global.client.taixiu[ii].data)) {
+        var name = (await Users.getNameUser(i)) || "Player";
+        await increaseMoney(
+          i,
+          String(global.client.taixiu[ii].data[i].bet * 2n
+        ));
+        msg += `\n\n⛔ ${name}:  ${global.client.taixiu[ii].data[i].name}`;
+        tong = tong + global.client.taixiu[ii].data[i].bet;
+      }
+      await decreaseMoney(global.client.taixiu_start[ii].author, tong);
+      msg +=
+        "\n\n📌 Đặt cược quá lâu, tiến hành hủy bàn và hoàn tiền";
+      api.sendMessage(msg, ii);
+      delete global.client.taixiu[ii];
+      delete global.client.taixiu_start[ii];
+    }
+    }
+  },200)
+}
+module.exports.run = async function ({ event, api, Currencies, Users, args }) {
+    try{
+    const moment = require("moment-timezone");
+    const format_day = moment.tz("Asia/Ho_Chi_Minh").format("DD/MM/YYYY - HH:mm:ss");
+    const { sendMessage: send } = api;
+    const { increaseMoney , decreaseMoney } = Currencies;
+    const { threadID, messageID, senderID } = event;
+      if(args[0] === 'create'){
+        if(global.client.taixiu[threadID]) return send('Box bạn hiện tại đã có bàn tài xỉu!', threadID)
+        global.client.taixiu[threadID] = {
+          author: senderID,
+          threadID,
+          player: 0,
+          start: false,
+          data: {}
+        }
+        global.client.taixiu_start[threadID] = {
+          author: senderID,
+          time: Date.now()
+        }
+      }
+      
+} catch(e){
+    console.log(e)
+}}
+exports.handleEvent = async function ({ api, event, args, Users}){
+  try{
+  const { increaseMoney , decreaseMoney, getData } = Currencies;
+  const { sendMessage: send } = api;
+  const { threadID, messageID, senderID } = event;
+  if(!global.client.taixiu[threadID]) return
+  if(!global.client.taixiu[threadID].start) return
+  if(event.body === undefined) return
+  if(['tài','Tài'].includes(event.args[0])){
+    var money = event.args[1]
+    if(isNaN(money)) {
+       if(money !== 'all'){
+       return send('Money phải là một số!', threadID)
+       } 
+     }
+    const moneyUser = (await getData(senderID)).money;
+    const moneyBet = money === "all" ? moneyUser : BigInt(money)
+    global.client.taixiu[threadID].data[senderID] = {
+      bet: 'tài',
+      money: moneyBet 
+    }
+    return send(`Đã đặt cược ${moneyBet} vào tài`, threadID)
+  }
+  if(['xỉu','Xỉu'].includes(event.args[0])){
+    var money = event.args[1]
+    if(isNaN(money)) {
+       if(money !== 'all'){
+       return send('Money phải là một số!', threadID)
+       } 
+     }
+    const moneyUser = (await getData(senderID)).money;
+    const moneyBet = money === "all" ? moneyUser : BigInt(money)
+    global.client.taixiu[threadID].data[senderID] = {
+      bet: 'xỉu',
+      money: moneyBet 
+    }
+    return send(`Đã đặt cược ${moneyBet} vào xỉu`, threadID)
+  }
+  if(['leave', 'Leave'].includes(event.args[0])){
+    if(global.client.taixiu[threadID].author === senderID){
+      delete global.client.taixiu[threadID]
+      return send('Chủ bàn đã rời nên bàn tài xỉu sẽ bị hủy!',threadID)
+    }
+    delete global.client.taixiu[threadID].data[senderID]
+    return send('Đã rời khỏi bàn tài xỉu thành công!', threadID)
+  }
+    if(global.client.taixiu[threadID].author !== senderID) return
+  if(['end', 'End'].includes(event.args[0])){
+    delete global.client.taixiu[threadID]
+    return send('Đã xóa bàn tài xỉu thành công!', threadID)
+  }
+  if(['start', 'Start'].includes(event.args[0])){
+     global.client.taixiu[threadID].start = true
+     global.client.taixiu_start[threadID] = {
+       author: global.client.taixiu[threadID].author,
+       time: Date.now()
+     }
+    return send('Bàn tài xỉu đã được bắt đầu\nNgười chơi có thể đặt cược sau khi nhận thông báo này!', threadID)
+  }
+  if(['xổ', 'Xổ'].includes(event.args[0])){
+   f (!global.client.taixiu[threadID]) return send('Nhóm của bạn chưa có bàn tải xỉu nào!',threaID);
+    const number = [], img = [], num = 0, msg = '=== [ 𝗞𝗘̂́𝗧 𝗤𝗨𝗔̉ 𝗧𝗔̀𝗜 𝗫𝗜̉𝗨 ] ===\n━━━━━━━━━━━━━━━━━━';
+    for(let i = 1; i < 4; i++){
+    var n = Math.floor(Math.random() * 6 + 1) 
+    number.push(n) 
+}
+for (let i of number){
+  img.push((await axios.get(await getImage(i), {
+    responseType: 'stream',
+})).data);
+}
+var total = number[0] + number[1] + number[2];
+if(number[0] == number[1] && number[1] == number[2]){
+var ans = "bộ ba đồng nhất"
+} else {
+var ans = (total >= 11 && total <= 18 ? "tài" : "xỉu") 
+}
+    msg += `\n⏰ 𝗩𝗮̀𝗼 𝗹𝘂́𝗰: ${format_day}`
+for(const i of Object.keys(global.client.taixiu[threadID].data[senderID])){
+  var name = await Users.getNameUser(i)
+const money = (await getData(i)).money
+const bet = global.client.taixiu[threadID].data[i].money
+const choose = global.client.taixiu[threadID].data[i].bet
+if(number[0] == number[1] && number[1] == number[2]) {
+    var result = 'lose'
+    var mn = bet
+    var mne = money - mn
+}
+if(ans == choose) {
+    var result = 'win'
+    var mn = bet * BigInt(tilethang)
+    var mne = mn + money
+} else {
+    var result = 'lose'
+    var mn = bet
+    var mne = money - mn
+}
+if(result =='lose'){
+    decreaseMoney(i, String(mn))
+} else if(result == 'win'){
+    increaseMoney(i, String(mn))
+}
+  msg += `\n${num}. ${name} ( ${ans == choose ? '+' + mn : '-' + mn} )`
+} 
+    msg += `\n🕵️ 𝗧𝗿𝗮̣𝗻𝗴 𝗧𝗵𝗮́𝗶: ${(result == 'win' ? 'Đã Trả Thưởng' : 'Đã Trừ Tiền')}`
+            global.client.taixiu_end[threadID] = {
+              author: global.client.taixiu[threadID].author,
+              time: Date.now()
+            }
+            delete global.client.taixiu[threadID]
+            send({body:msg,attachment: img}, threadID, messageID)
+  }
+  
+  }catch(e){
+    console.log(e)
+  }
+}

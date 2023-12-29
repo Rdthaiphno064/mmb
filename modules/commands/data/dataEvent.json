@@ -1,0 +1,94 @@
+{
+    "join": [
+        {
+            "threadID": "5556442971082682",
+            "status": false
+        },
+        {
+            "threadID": "3300866866642108",
+            "status": true
+        },
+        {
+            "threadID": "5885468938142520",
+            "status": true
+        },
+        {
+            "threadID": "4743960632338191",
+            "status": true
+        },
+        {
+            "threadID": "5855642881210699",
+            "status": false
+        },
+        {
+            "threadID": "6502519466530238",
+            "status": false
+        },
+        {
+            "threadID": "6508461065858233",
+            "status": false
+        },
+        {
+            "threadID": "9194392737253399",
+            "status": false
+        },
+        {
+            "threadID": "24008226332124588",
+            "status": false
+        },
+        {
+            "threadID": "6625459097507069",
+            "status": false
+        }
+    ],
+    "leave": [
+        {
+            "threadID": "5556442971082682",
+            "status": false
+        },
+        {
+            "threadID": "5885468938142520",
+            "status": true
+        },
+        {
+            "threadID": "4743960632338191",
+            "status": true
+        },
+        {
+            "threadID": "6245529198893229",
+            "status": false
+        },
+        {
+            "threadID": "6326347894117284",
+            "status": false
+        },
+        {
+            "threadID": "5762680530483088",
+            "status": true
+        },
+        {
+            "threadID": "5855642881210699",
+            "status": false
+        },
+        {
+            "threadID": "4216524055084248",
+            "status": false
+        },
+        {
+            "threadID": "6336702966406733",
+            "status": true
+        },
+        {
+            "threadID": "6834871869889629",
+            "status": true
+        },
+        {
+            "threadID": "7115075131878149",
+            "status": true
+        },
+        {
+            "threadID": "7065017573511267",
+            "status": false
+        }
+    ]
+}

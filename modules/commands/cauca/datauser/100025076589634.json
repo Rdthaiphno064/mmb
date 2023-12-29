@@ -1,0 +1,29 @@
+{
+  "name": "Tai Do",
+  "ID": "100025076589634",
+  "mainROD": "Jeweled Tungsten Harpoon",
+  "GPS": {
+    "locate": "Sector Zero",
+    "area": "Shallow Twisty Bridges – Twisty Bridges"
+  },
+  "fishBag": [],
+  "item": [
+    {
+      "name": "Light Iron Harpoon",
+      "price": 400,
+      "durability": 10,
+      "countdown": 300,
+      "countdownData": 1692498881450,
+      "image": "https://i.imgur.com/gQuka5L.jpg"
+    },
+    {
+      "name": "Jeweled Tungsten Harpoon",
+      "price": 29000,
+      "durability": 760,
+      "countdown": 30,
+      "countdownData": 1692764914794,
+      "image": "https://i.imgur.com/P4l8Ivq.jpg"
+    }
+  ],
+  "timeRegister": "09:12:19, 20/8/2023"
+}

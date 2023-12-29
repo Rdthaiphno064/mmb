@@ -1,0 +1,18 @@
+{
+    "name": "Trần Ngọc Khoa",
+    "ID": "100058777653339",
+    "shield": 2,
+    "coins": 5000,
+    "Island": {
+        "level": 1,
+        "coinsLV": 200,
+        "data": {
+            "tower": 0,
+            "tree": 0,
+            "pool": 0,
+            "pet": 0
+        }
+    },
+    "spin": 20,
+    "timeRegister": "01:01:40, 4/8/2023"
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Hồ Quý",
+    "ID": "100034177008575",
+    "mainROD": null,
+    "GPS": {
+        "locate": null,
+        "area": null
+    },
+    "fishBag": [
+        {
+            "ID": 0,
+            "name": "Bedrock",
+            "category": "Legendary",
+            "size": 999999,
+            "sell": 0
+        }
+    ],
+    "item": [],
+    "timeRegister": "19:34:22, 12/9/2023"
+}

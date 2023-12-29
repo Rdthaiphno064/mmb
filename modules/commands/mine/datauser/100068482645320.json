@@ -1,0 +1,166 @@
+{
+  "name": "Jin Huỳnh",
+  "ID": "100068482645320",
+  "mainROD": "Cúp Netherite",
+  "GPS": {
+    "locate": "The Earth",
+    "area": "Hang Động"
+  },
+  "fishBag": [
+    {
+      "ID": 7,
+      "name": "Nether Quartz Ore",
+      "category": "Uncommon",
+      "size": 120,
+      "sell": 990,
+      "image": "https://i.imgur.com/2lk1JeN.png"
+    },
+    {
+      "ID": 10,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 11,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 17,
+      "name": "Nether Quartz Ore",
+      "category": "Uncommon",
+      "size": 120,
+      "sell": 990,
+      "image": "https://i.imgur.com/2lk1JeN.png"
+    },
+    {
+      "ID": 18,
+      "name": "Nether Quartz Ore",
+      "category": "Uncommon",
+      "size": 120,
+      "sell": 990,
+      "image": "https://i.imgur.com/2lk1JeN.png"
+    },
+    {
+      "ID": 19,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 21,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 29,
+      "name": "Sỏi",
+      "category": "Uncommon",
+      "size": 22,
+      "sell": 300,
+      "image": "https://i.imgur.com/Gl4ylvn.jpg"
+    },
+    {
+      "ID": 32,
+      "name": "Cát Linh Hồn",
+      "category": "Uncommon",
+      "size": 32,
+      "sell": 410,
+      "image": "https://i.imgur.com/kF12cBQ.png"
+    },
+    {
+      "ID": 36,
+      "name": "Nether Quartz Ore",
+      "category": "Uncommon",
+      "size": 120,
+      "sell": 990,
+      "image": "https://i.imgur.com/2lk1JeN.png"
+    },
+    {
+      "ID": 39,
+      "name": "Nether Quartz Ore",
+      "category": "Uncommon",
+      "size": 120,
+      "sell": 990,
+      "image": "https://i.imgur.com/2lk1JeN.png"
+    },
+    {
+      "ID": 48,
+      "name": "Đá Cuội",
+      "category": "Uncommon",
+      "size": 190,
+      "sell": 760,
+      "image": "https://i.imgur.com/EF8ufGh.png"
+    },
+    {
+      "ID": 52,
+      "name": "Thân Nấm Giant",
+      "category": "Epic",
+      "size": 170,
+      "sell": 3480,
+      "image": "https://i.imgur.com/8UzxUUu.png"
+    },
+    {
+      "ID": 55,
+      "name": "Thân Nấm Giant",
+      "category": "Epic",
+      "size": 170,
+      "sell": 3480,
+      "image": "https://i.imgur.com/8UzxUUu.png"
+    },
+    {
+      "ID": 56,
+      "name": "Thân Nấm Giant",
+      "category": "Epic",
+      "size": 170,
+      "sell": 3480,
+      "image": "https://i.imgur.com/8UzxUUu.png"
+    },
+    {
+      "ID": 57,
+      "name": "Thân Nấm Giant",
+      "category": "Epic",
+      "size": 170,
+      "sell": 3480,
+      "image": "https://i.imgur.com/8UzxUUu.png"
+    },
+    {
+      "ID": 58,
+      "name": "Thân Nấm Giant",
+      "category": "Epic",
+      "size": 170,
+      "sell": 3480,
+      "image": "https://i.imgur.com/8UzxUUu.png"
+    }
+  ],
+  "item": [
+    {
+      "name": "Cúp sắt",
+      "price": 4000,
+      "durability": 100,
+      "countdown": 8,
+      "countdownData": null,
+      "image": "https://i.imgur.com/Rrlr2ZB.png"
+    },
+    {
+      "name": "Cúp Netherite",
+      "price": 29000,
+      "durability": 0,
+      "countdown": 3,
+      "countdownData": 1689612915920,
+      "image": "https://i.imgur.com/k1skyAb.png"
+    }
+  ],
+  "timeRegister": "15:58:42, 14/7/2023"
+}

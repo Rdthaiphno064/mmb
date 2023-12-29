@@ -1,0 +1,189 @@
+{
+  "name": "Phạm Bảo",
+  "ID": "100054519057194",
+  "mainROD": "Cúp Netherite",
+  "GPS": {
+    "locate": "The Earth",
+    "area": "Biển Nam Cực"
+  },
+  "fishBag": [
+    {
+      "ID": 0,
+      "name": "Bedrock",
+      "category": "Legendary",
+      "size": 999999,
+      "sell": 0
+    },
+    {
+      "ID": 1,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 6,
+      "name": "Khối Băng Mỏng",
+      "category": "Uncommon",
+      "size": 250,
+      "sell": 990,
+      "image": "https://i.imgur.com/UzsoFh6.png"
+    },
+    {
+      "ID": 10,
+      "name": "Khối Băng Mỏng",
+      "category": "Uncommon",
+      "size": 250,
+      "sell": 990,
+      "image": "https://i.imgur.com/UzsoFh6.png"
+    },
+    {
+      "ID": 11,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 20,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 24,
+      "name": "Khối Băng Mỏng",
+      "category": "Uncommon",
+      "size": 250,
+      "sell": 990,
+      "image": "https://i.imgur.com/UzsoFh6.png"
+    },
+    {
+      "ID": 28,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 29,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 33,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 41,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 46,
+      "name": "Khối Băng Mỏng",
+      "category": "Uncommon",
+      "size": 250,
+      "sell": 990,
+      "image": "https://i.imgur.com/UzsoFh6.png"
+    },
+    {
+      "ID": 49,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 50,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 51,
+      "name": "Đá Cuội",
+      "category": "Common",
+      "size": 30,
+      "sell": 200,
+      "image": "https://i.imgur.com/TF2q5Zp.jpg"
+    },
+    {
+      "ID": 52,
+      "name": "Lớp Tuyết Dày",
+      "category": "Rare",
+      "size": 67,
+      "sell": 990,
+      "image": "https://i.imgur.com/oTDC0Pm.png"
+    },
+    {
+      "ID": 53,
+      "name": "Đá",
+      "category": "Common",
+      "size": 31,
+      "sell": 200,
+      "image": "https://i.imgur.com/XKv8I3a.png"
+    },
+    {
+      "ID": 54,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 55,
+      "name": "Đá Cuội",
+      "category": "Common",
+      "size": 30,
+      "sell": 200,
+      "image": "https://i.imgur.com/TF2q5Zp.jpg"
+    },
+    {
+      "ID": 56,
+      "name": "Snow Block",
+      "category": "Uncommon",
+      "size": 19,
+      "sell": 370,
+      "image": "https://i.imgur.com/bHXBgAs.png"
+    },
+    {
+      "ID": 57,
+      "name": "Lớp Tuyết Dày",
+      "category": "Rare",
+      "size": 67,
+      "sell": 990,
+      "image": "https://i.imgur.com/oTDC0Pm.png"
+    }
+  ],
+  "item": [
+    {
+      "name": "Cúp Netherite",
+      "price": 29000,
+      "durability": 0,
+      "countdown": 3,
+      "countdownData": 1690141084345,
+      "image": "https://i.imgur.com/k1skyAb.png"
+    }
+  ],
+  "timeRegister": "13:56:42, 14/7/2023"
+}

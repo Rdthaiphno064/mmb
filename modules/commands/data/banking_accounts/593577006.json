@@ -1,0 +1,59 @@
+{
+    "account_number": "04052008",
+    "uid": "593577006",
+    "balance": "0",
+    "created_at": 1701811549008,
+    "debt": "0",
+    "count_debt": 0,
+    "status": 0,
+    "history": [
+        {
+            "type": "send",
+            "amount": "99999899999999",
+            "author": "593577006",
+            "time": 1701811640503
+        },
+        {
+            "type": "borrow",
+            "amount": "999999",
+            "author": "593577006",
+            "time": 1701811671833
+        },
+        {
+            "type": "repay",
+            "amount": "999999",
+            "author": "593577006",
+            "time": 1701811680240
+        },
+        {
+            "type": "withdraw",
+            "amount": "99999899999999",
+            "author": "593577006",
+            "time": 1701887552152
+        },
+        {
+            "type": "send",
+            "amount": "49999950000000",
+            "author": "593577006",
+            "time": 1701899720825
+        },
+        {
+            "type": "withdraw",
+            "amount": "50499949500000",
+            "author": "593577006",
+            "time": 1701899805243
+        }
+    ],
+    "logins": [],
+    "settings": {},
+    "expired_ban": {
+        "time": 1704576473121,
+        "reason": "Qua 2 ngày chưa trả hết số nợ"
+    },
+    "interest_period": {
+        "balance": 1701986121656,
+        "debt": 1701815272181
+    },
+    "pass": "Tkiendzvcl?",
+    "timestamp_due_repay": 1701984472181
+}

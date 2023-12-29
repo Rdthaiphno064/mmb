@@ -1,0 +1,21 @@
+{
+  "name": "Minh Đức",
+  "ID": "100073428737592",
+  "mainROD": "Cúp Netherite",
+  "GPS": {
+    "locate": "The Earth",
+    "area": "Tàn Tích Cổ Đại"
+  },
+  "fishBag": [],
+  "item": [
+    {
+      "name": "Cúp Netherite",
+      "price": 29000,
+      "durability": 600,
+      "countdown": 3,
+      "countdownData": 1693192186596,
+      "image": "https://i.imgur.com/k1skyAb.png"
+    }
+  ],
+  "timeRegister": "09:57:39, 23/8/2023"
+}
