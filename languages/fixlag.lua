@@ -1,3 +1,4 @@
+game:GetService("RunService"):Set3dRenderingEnabled(false)
 for i,v in next, workspace:GetDescendants() do
     pcall(function()
         v.Transparency = 1
