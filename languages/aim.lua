@@ -1,36 +1,32 @@
 getgenv().setting = {
-    Fov = 25,
-    Color = Color3.fromRGB(191, 255, 209),
     LockPlayers = true,
     LockPlayersBind = Enum.KeyCode.L,
     resetPlayersBind = Enum.KeyCode.P,
 }
 local Playersaimbot = nil
+local PlayersPosition = nil
 local mouse = game.Players.LocalPlayer:GetMouse()
 local players = game:GetService("Players")
 local localPlayer = players.LocalPlayer
 local currentCamera = game:GetService("Workspace").CurrentCamera
 spawn(function()
     while wait() do
+        local closest = nil
+        local closestDist = math.huge
+
         for _, v in pairs(players:GetPlayers()) do
             if v ~= localPlayer and v.Character and v.Character:FindFirstChild("HumanoidRootPart") then
-                local pos = currentCamera:WorldToViewportPoint(v.Character.HumanoidRootPart.Position)
-                local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(mouse.X, mouse.Y)).magnitude
-                if magnitude < (getgenv().setting['Fov'] * 6 - 8) / 2 then
-                    if (v.Character.HumanoidRootPart.Position - localPlayer.Character.HumanoidRootPart.Position).magnitude <= 1000 then
-                        Playersaimbot = v.Name
-                    end
+                local dist = (v.Character.HumanoidRootPart.Position - localPlayer.Character.HumanoidRootPart.Position).Magnitude
+                if dist < closestDist then
+                    closestDist = dist
+                    closest = v
                 end
             end
         end
-    end
-end)
-spawn(function()
-    while wait() do
-        for _, v in pairs(players:GetPlayers()) do
-            if v.Name == Playersaimbot then
-                PlayersPosition = v.Character.HumanoidRootPart.Position
-            end
+
+        if closest then
+            Playersaimbot = closest.Name
+            PlayersPosition = closest.Character.HumanoidRootPart.Position
         end
     end
 end)
