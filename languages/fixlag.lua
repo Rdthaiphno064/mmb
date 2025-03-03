@@ -17,3 +17,13 @@ a.DescendantAdded:Connect(function(v)
         v.Transparency = 1
     end)
 end)
+for _, v in pairs(game:GetDescendants()) do
+    if v:IsA("Sound") then
+        v.Volume = 0
+    end
+end
+game.DescendantAdded:Connect(function(v)
+    if v:IsA("Sound") then
+        v.Volume = 0
+    end
+end)
