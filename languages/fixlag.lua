@@ -1,4 +1,5 @@
 game:GetService("RunService"):Set3dRenderingEnabled(false)
+setfpscap(10)
 for i,v in next, workspace:GetDescendants() do
     pcall(function()
         v.Transparency = 1
