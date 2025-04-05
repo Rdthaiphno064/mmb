@@ -11,6 +11,7 @@ install_system() {
   echo "Cập nhật hệ thống và cài đặt công cụ..."
   apt update -y
   apt install -y python3 ufw net-tools wget curl
+  pip3 install requests
 
   # Tăng giới hạn file descriptor
   echo "Tăng giới hạn file descriptor..."
@@ -39,13 +40,13 @@ EOL
 
   # Tải file se.py
   echo "Tải file se.py từ GitHub..."
-  wget -O se.py https://github.com/Rdthaiphno064/mmb/raw/refs/heads/main/utils/se.py
+  wget -O se.py https://github.com/Rdthaiphno064/mmb/raw/refs/heads/main/utils/vip.py
   if [ $? -eq 0 ]; then
     echo "Tải se.py thành công!"
     chmod +x se.py
   else
     echo "Lỗi khi tải se.py, thử dùng curl..."
-    curl -o se.py https://github.com/Rdthaiphno064/mmb/raw/refs/heads/main/utils/se.py
+    curl -o se.py https://github.com/Rdthaiphno064/mmb/raw/refs/heads/main/utils/vip.py
     if [ $? -eq 0 ]; then
       echo "Tải se.py thành công bằng curl!"
       chmod +x se.py
