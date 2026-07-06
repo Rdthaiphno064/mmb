@@ -10,7 +10,7 @@ $done({
       valid: true,
       product: {
         _id: "69d5456480caeb029780d8ab",
-        name: Aovcheat VN",
+        name: "Aovcheat VN",
         bundle: "com.garena.game.kgvn1"
       },
       deviceId: "f5c444bdcfe54aa09fd5dc7abd26dbd6",
